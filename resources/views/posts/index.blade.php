@@ -40,9 +40,17 @@
                                         <a href="{{route('posts.edit',$post)}}" class="btn btn-outline-info">
                                             <i class="fas fa-edit"></i> Editar
                                         </a>
-                                        <a href="{{route('posts.destroy',$post)}}" class="btn btn-outline-danger">
-                                            <i class="fas fa-trash-alt"></i> Eliminar
-                                        </a>
+                                    </td>
+                                    <td>
+                                        <form action="{{route('posts.destroy',$post)}}" method="POST">
+                                            @method('delete')
+                                            @csrf
+                                            <input
+                                            type="submit"
+                                            value="Eliminar"
+                                            class="btn btn-outline-danger"
+                                            onclick="return confirm('Desea eliminar')">
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach
