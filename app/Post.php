@@ -13,6 +13,10 @@ class Post extends Model
      *
      * @return array
      */
+
+    protected $fillable = [
+        'title', 'body', 'user_id', 'iframe','image'
+    ];
     public function sluggable(): array
     {
         return [

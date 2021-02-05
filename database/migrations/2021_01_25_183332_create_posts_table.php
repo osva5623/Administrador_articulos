@@ -17,9 +17,11 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('user_id')->unsigned();
             $table->text('title');
+            $table->string('slug')->unique();
+            $table->text('image')->nullable();
             $table->text('body');
             $table->string('iframe')->nullable();
-            $table->string('slug')->unique();
+
 
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');

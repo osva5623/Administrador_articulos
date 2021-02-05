@@ -2,6 +2,11 @@
 
 @section('content')
 <div class="container">
+    <div class="alert">
+        @foreach ($errors->all() as $error)
+            {{$error}}
+        @endforeach
+    </div>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -15,6 +20,7 @@
                     @endif
 
                     <form action="{{route('posts.store')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="form-group">
                             <label for="">Titulo *</label>
                             <input type="text" class="form-control" name="title" required>
