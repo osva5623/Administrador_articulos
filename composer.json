@@ -12,7 +12,8 @@
         "cviebrock/eloquent-sluggable": "6.0.4",
         "fideloper/proxy": "^4.4",
         "laravel/framework": "^6.20",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "fzaninotto/faker": "^1.4.0"
     },
     "require-dev": {
         "facade/ignition": "^1.16.4",
